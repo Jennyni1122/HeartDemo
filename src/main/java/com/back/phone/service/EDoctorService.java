@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface EDoctorService {
     
-    int deleteByPrimaryKey(String customerId);
+    int deleteByPrimaryKey(String doctorId);
 
     int insert(EDoctor record);
 
     int insertSelective(EDoctor record);
 
-    EDoctor selectByPrimaryKey(String customerId);
+    EDoctor selectByPrimaryKey(String doctorId);
 
     int updateByPrimaryKeySelective(EDoctor record);
 

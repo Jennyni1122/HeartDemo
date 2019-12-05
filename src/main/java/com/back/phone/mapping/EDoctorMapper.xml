@@ -259,7 +259,7 @@
         </set>
         where doctor_id = #{doctorId,jdbcType=VARCHAR}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.back.phone.model.Tfdoctor" >
+    <update id="updateByPrimaryKey" parameterType="com.back.phone.model.Edoctor" >
         update e_doctor
         set user_id = #{userId,jdbcType=VARCHAR},
             doctor_complete = #{doctorComplete,jdbcType=VARCHAR},
@@ -283,10 +283,10 @@
     </update>
 
     <select id="queryTempList" resultMap="BaseResultMap"
-            parameterType="com.back.phone.model.Tfdoctor">
+            parameterType="com.back.phone.model.Edoctor">
         select
         <include refid="Base_Column_List" />
-        from e_doctor
+        from heart_nj.e_doctor
         <where>
             (1=1)
             <if test="userId!=null and userId!=''">
